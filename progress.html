@@ -1,0 +1,65 @@
+<input type="text" id="answer" class="right">
+<button onclick="acceptAnswer()" class="right">
+  Submit
+</button>
+<p class="text" id="textUno"></p>
+<p class="text" id="textDos"></p>
+<p class="text" id="textTres"></p>
+<p class="text" id="userNotes"></p>
+
+<script>
+
+var strength = 0;
+var dexterity = 0;
+var health = 0;
+var defense = 0;
+var gender;
+
+function addStrength(increase) {
+  strength = strength + increase;
+  document.getElementById("userNotes").innerHTML = "Your strength is now " + strength;
+}
+
+function addDexterity(increase) {
+  dexterity = dexterity + increase;
+  document.getElementById("userNotes").innerHTML = "Your dexterity is now " + dexterity;
+}
+
+function addHealth(increase) {
+  health = health + increase;
+  document.getElementById("userNotes").innerHTML = "Your health is now " + health;
+}
+
+function addDefense(increase) {
+  defense = defense + increase;
+  document.getElementById("userNotes").innerHTML = "Your defense is now " + defense;
+}
+
+function random() {
+  var x = Math.Floor(Math.Random() * 100);
+  return x;
+}
+function acceptAnswer() {
+	var answer = document.getElementById("answer").value;
+  document.getElementnById("textUno").innerHTML = answer;
+}
+
+///Start of the Adventure
+document.getElementById("textUno").innerHTML = "You are a young worker under a man who has protected you, but put you into labor for years, you have just gotten old enough to venture off on your own and you would rather that than live longer under this man's kind but difficult to earn household.";
+document.getElementById("textDos").innerHTML = "First of all is character design, are you male or female?"
+
+switch {
+  case answer === "male" || "man" || "guy" || "dude":
+  	gender = "male";
+  	document.getElementById("textUno").innerHTML = "So, on a scale of 1 to 10, how bulky do you want your muscles?";
+    document.getElementById("textDos").innerHTML = "Just kidding, videogame cliches. Don't answer that.";
+  break;
+  case answer === "female" || "girl" || "gal" || "lass" || "woman":
+  	gender = "female";
+    document.getElementById("textUno").innerHTML = "On a scale of 1 to 10, how skimpy do you want your suit to be? 1 being the absolute least, while 10 being the most, it's more defense, right?";
+    document.getElementById("textDos").innerHTML = "Just kidding, videogame cliches. Don't answer that.";
+  break;
+  case answer === "something" || "none"
+}
+
+</script>
