@@ -1,0 +1,12 @@
+.right {
+  float: right;
+}
+
+.text {
+  float: left;
+  font-size: 15px;
+}
+
+text:nth-child(1) {
+  margin-top: 50px;
+}
